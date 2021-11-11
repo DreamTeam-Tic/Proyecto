@@ -1,0 +1,2 @@
+
+Aqui se guardaran las imagenes de la pagina y sus componentes.
