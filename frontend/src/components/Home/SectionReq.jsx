@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Carrousel() {
+function SectionReq() {
     return (
         //aqui debe estar tu componente
         <div>
@@ -9,4 +9,6 @@ function Carrousel() {
     )
 }
 
-export default Carrousel
+export default SectionReq
+
+
