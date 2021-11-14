@@ -1,3 +1,4 @@
+import SectionTips from './components/Home/SectionTips.jsx'
 
 
 function App() {
@@ -5,6 +6,10 @@ function App() {
     <div className="App">
 
       <h1>PetsForAlways</h1>
+
+
+      
+      <SectionTips/>
       
     </div>
   );
