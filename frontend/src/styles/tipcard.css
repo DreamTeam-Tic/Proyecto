@@ -1,0 +1,21 @@
+
+.card{
+    -webkit-box-shadow: 14px -4px 44px 0px rgba(0, 243, 130, 0.82);
+    -moz-box-shadow: 14px -4px 44px 0px rgba(106,71,245,0.82);
+    box-shadow: 14px -4px 44px 0px rgba(68, 70, 69, 0.253);
+    margin-bottom: 10px;
+    
+}
+
+.card-title{
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-text{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-body_button{
+
+}

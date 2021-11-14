@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.tipcard{
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cardbody{
+
+  background-color: aquamarine;
+}
