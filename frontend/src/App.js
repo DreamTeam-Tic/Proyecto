@@ -1,12 +1,19 @@
-
+import {BrowserRouter as Router} from 'react-router-dom'
+import './App.css';
+import Carrusel from '../src/components/Home/Carrusel';
 
 function App() {
   return (
-    <div className="App">
 
-      <h1>PetsForAlways</h1>
+    <Router>
+      <Carrusel/>
+    </Router>
       
-    </div>
+      
+
+
+
+    
   );
 }
 
