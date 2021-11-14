@@ -5,7 +5,7 @@ import logo from '../../assets/logo.jpeg'
 
 function Nabvar() {
     return (
-        //aqui debe estar tu componente
+      
         <div>
             <Navbar bg="light" expand="lg">
           <Container>

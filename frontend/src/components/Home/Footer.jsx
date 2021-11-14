@@ -9,9 +9,9 @@ import Instagram from '../../assets/instagram.png'
 import Twitter from '../../assets/twitter.png'
 import Github from '../../assets/github.png'
 function Footer() {
-    return (
-      
-      <MDBFooter color="light" className="font-small pt-4 mt-4 text-center">
+    
+  return (
+    <MDBFooter color="light" className="font-small pt-4 mt-4 text-center">
       <MDBContainer fluid className="text-center text-black text-md-left">
         
           <MDBCol md="12">
@@ -41,8 +41,6 @@ function Footer() {
             </a>
             </div>
             </div>  
-            
-          
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright bg-light text-center text-black py-3">
