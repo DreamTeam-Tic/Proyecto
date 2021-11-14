@@ -1,3 +1,5 @@
+import SectionReq from "./components/Home/SectionReq";
+import '../src/App.css'
 
 
 function App() {
@@ -5,6 +7,7 @@ function App() {
     <div className="App">
 
       <h1>PetsForAlways</h1>
+      <SectionReq/>
       
     </div>
   );
