@@ -8,6 +8,7 @@ function App() {
       <h1>PetsForAlways</h1>
 
 
+      
       <SectionTips/>
       
     </div>
