@@ -29,8 +29,7 @@ function Nabvar() {
                 <Nav.Link href="/donaciones">Donaciones</Nav.Link>
                 <Nav.Link href="/nosotros">Nosotros</Nav.Link>
                 <Nav.Link href="/contactanos">Contáctanos</Nav.Link>
-                <Nav.Link href="/formulario">Formulario</Nav.Link>
-              </Nav>
+                </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
