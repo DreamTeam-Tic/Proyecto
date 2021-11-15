@@ -1,12 +1,11 @@
 import React from 'react'
 
-function Carrousel() {
+function Contactanos() {
     return (
-        //aqui debe estar tu componente
         <div>
             
         </div>
     )
 }
 
-export default Carrousel
+export default Contactanos
