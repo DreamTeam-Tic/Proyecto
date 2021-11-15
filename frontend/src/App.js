@@ -13,8 +13,8 @@ function App() {
       <Router>
         <Nabvar />
         <Route path="/" />
-        <Route path="/" exact component={SectionTips}/>
         <Route path="/" exact component={Carrusel}/>
+        <Route path="/" exact component={SectionTips}/>
         </Router>
       <Footer />
     </div>

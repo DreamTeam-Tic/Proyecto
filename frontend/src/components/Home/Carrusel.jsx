@@ -7,7 +7,7 @@ import imagen3 from '../../assets/p3.png'
 
 export default function Carrusel() {
     return (
-        <div className='container'>
+        <div className='container mt-5'>
             <Carousel variant="white" className="rounded">
   <Carousel.Item style={{height:'450px'}}>
     <img
