@@ -4,6 +4,7 @@ import "./App.css";
 import Footer from "./components/Home/Footer";
 import Nabvar from "./components/Home/Nabvar";
 import SectionTips from "./components/Home/SectionTips.jsx";
+import Carrusel from '../src/components/Home/Carrusel';
 
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
         <Nabvar />
         <Route path="/" />
         <Route path="/" exact component={SectionTips}/>
+        <Route path="/" exact component={Carrusel}/>
         </Router>
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
