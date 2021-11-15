@@ -6,6 +6,7 @@ import Nabvar from "./components/Home/Nabvar";
 import SectionTips from "./components/Home/SectionTips.jsx";
 import SectionReq from "./components/Home/SectionReq"
 import Carrusel from '../src/components/Home/Carrusel';
+import Home from "./components/Home/Home"
 
 
 function App() {
@@ -13,10 +14,9 @@ function App() {
     <div className="App">
       <Router>
         <Nabvar />
-        <Route path="/" />
-        <Route path="/" exact component={Carrusel}/>
-        <Route path="/" exact component={SectionTips}/>
-        <Route path="/" exact component={SectionReq}/>
+        
+        <Route path="/" exact component={Home}/>
+        
         </Router>
       <Footer />
       
