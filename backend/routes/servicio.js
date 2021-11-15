@@ -10,16 +10,17 @@ const multer = require("multer");
 const storage = multer.diskStorage({
     destination: (req, res, cb) => {
         // cb(null, "../uploads");
-        cb(null, "../uploads");
+        cb(null, "uploads");
     },
     filename: (req, file, cb) => {
-        cb(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+        cb(null, file.fieldname +"_" + Date.now()+ "_" + file.originalname);
     }
 });
 
+const model = require("../models")
 
-const upload = multer({ storage: storage });
+const upload = multer({storage: storage});
 
-router.post('/add', upload.single("ImagenPrincipal"),servicioController.add)
+router.post('/add', upload.single("imagenPrincipal"),servicioController.add)
 
 module.exports = router
