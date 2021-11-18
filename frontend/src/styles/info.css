@@ -1,27 +1,7 @@
-/* .ContainerP{
-    margin: auto;
-    box-sizing: border-box;
-    width: auto;
-    margin: auto;
-    height: 14rem;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
-} */
-#Texto{
-    box-sizing: border-box;
-    margin: auto;
-    flex-direction: row;
-    text-align: center;
-}
 
-.imagen{
+#imagen{
     box-sizing: border-box;
     height: inherit;
     border-radius: 8px;
-    margin: 10px;
+    margin: 15px;
 }
