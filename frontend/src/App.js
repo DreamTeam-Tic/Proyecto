@@ -7,6 +7,7 @@ import SectionTips from "./components/Home/SectionTips.jsx";
 import SectionReq from "./components/Home/SectionReq"
 import Carrusel from '../src/components/Home/Carrusel';
 import Home from "./components/Home/Home"
+import Login from "./components/Login/Login.jsx"
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
         <Nabvar />
         
         <Route path="/" exact component={Home}/>
+        <Route path="/login" exact component={Login}/>
+        
         
         </Router>
       <Footer />
