@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -129,11 +130,9 @@ function Login() {
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>
-    </ThemeProvider>
-
-
-        
+    </ThemeProvider>      
     );
+
 }
 
 export default Login
