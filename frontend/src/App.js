@@ -5,7 +5,7 @@ import Footer from "./components/Home/Footer";
 import Nabvar from "./components/Home/Nabvar";
 import Home from "./components/Home/Home"
 import Login from "./components/Login/Login.jsx"
-
+import Servicios from "./components/Servicios/Servicios.jsx"
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         
         <Route path="/" exact component={Home}/>
         <Route path="/login" exact component={Login}/>
-        
+        <Route path="/servicios" exact component={Servicios}/>
         
         </Router>
       <Footer />

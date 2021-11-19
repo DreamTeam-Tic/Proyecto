@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../assets/logo.jpeg'
 
 function Nabvar() {
-    return (
-      
-        <div>
+  return (
+    
+    <div>
+          <h1 className='my-3'>Pets for Always</h1>
             <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand href="#home">
