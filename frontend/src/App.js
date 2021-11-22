@@ -10,7 +10,8 @@ import Donaciones from "./components/Donaciones/Donaciones"
 import Contactanos from "./components/Contactanos/Contactanos.jsx"
 
 import Servicios from "./components/Servicios/Servicios.jsx"
-
+import Formulario from "./components/Servicios/Formulario.jsx"
+import Nosotros from './components/Nosotros/Nosotros.jsx'
 
 
 function App() {
@@ -20,13 +21,17 @@ function App() {
         <Nabvar />
         
         <Route path="/" exact component={Home}/>
-        <Route path="/login" exact component={Login}/>
+        <Route path="/login" exact component={Login}/> 
+        
 
         <Route path="/donaciones" exact component={Donaciones}/>
         <Route path="/contactanos" exact component={Contactanos}/>
                 
 
         <Route path="/servicios" exact component={Servicios}/>
+        <Route path="/formulario" exact component={Formulario}/>
+        <Route path="/Nosotros" exact component={Nosotros}/>
+
         
 
         </Router>
