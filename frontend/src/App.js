@@ -6,7 +6,7 @@ import Nabvar from "./components/Home/Nabvar";
 import Home from "./components/Home/Home"
 import Login from "./components/Login/Login.jsx"
 import Servicios from "./components/Servicios/Servicios.jsx"
-
+import Formulario from "./components/Servicios/Formulario.jsx"
 
 function App() {
   return (
@@ -15,8 +15,10 @@ function App() {
         <Nabvar />
         
         <Route path="/" exact component={Home}/>
-        <Route path="/login" exact component={Login}/>
+        <Route path="/login" exact component={Login}/> 
         <Route path="/servicios" exact component={Servicios}/>
+        <Route path="/formulario" exact component={Formulario}/>
+
         
         </Router>
       <Footer />
