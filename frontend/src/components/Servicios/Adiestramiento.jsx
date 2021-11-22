@@ -13,7 +13,7 @@ function Adiestramiento() {
                         <img 
                         src={adiestramiento2} 
                         alt="Adiestramiento"
-                        className="img-fluid rounded-start ml-4 mt-4 mb-4 imagen-services"/>
+                        className="img-fluid rounded-start ml-4 mt-5 mb-1 imagen-services"/>
                     </div>
                     <div className="col-md-8">
                     <div className="card-body">
@@ -31,7 +31,7 @@ function Adiestramiento() {
                         {/* <a href="/login" className="btn btn-primary">Go somewhere</a> */}
                         {/* <Card.Link href="/login">Más Info</Card.Link> */}
                         <Button 
-                        href="/Formulario" 
+                        href="/formulario" 
                         variant="light"
                         >Más Info</Button> 
                     </div>

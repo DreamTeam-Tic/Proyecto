@@ -27,7 +27,7 @@ function Guarderia() {
                             <li>Guardería para gatos,perros. Peluquería canina</li>
                         </ul>
                         <Button 
-                        href="/login" 
+                        href="/formulario" 
                         variant="light"
                         >Más Info</Button> 
                     </div>
