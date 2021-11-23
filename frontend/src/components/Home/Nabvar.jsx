@@ -43,7 +43,11 @@ function Nabvar() {
             <Nav.Link href="/mascotas">Mascotas</Nav.Link>
             <Nav.Link href="/servicios">Servicios</Nav.Link>
             <Nav.Link href="/donaciones">Donaciones</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>     
+            <div className='d-flex justify-content-end' style={{ width: '29rem' }}>
+                <Nav.Link href="/login">Login </Nav.Link>
+                <Nav.Link className='fas fa-user-shield mt-1'></Nav.Link>
+                </div>
+                
             <Nav.Link hidden={show} onClick={salir} href="#">Salir</Nav.Link>     
             </Nav>
             
@@ -53,6 +57,7 @@ function Nabvar() {
       </Container>
     </Navbar>
     </div>
+
 
     );
 }

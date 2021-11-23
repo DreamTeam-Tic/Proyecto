@@ -1,0 +1,5 @@
+.container-login{
+    display: flex;
+    width: 30rem;
+    justify-content: flex-end;
+}
