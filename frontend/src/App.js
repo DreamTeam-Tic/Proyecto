@@ -6,6 +6,7 @@ import Nabvar from "./components/Home/Nabvar";
 import Home from "./components/Home/Home"
 import Login from "./components/Login/Login.jsx"
 import Donaciones from "./components/Donaciones/Donaciones"
+import Nosotros from "./components/Nosotros/Nosotros";
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Nabvar />
         
         <Route path="/" exact component={Home}/>
+        <Route path="/nosotros" exact component={Nosotros}/>
+        
         <Route path="/login" exact component={Login}/>
         <Route path="/donaciones" exact component={Donaciones}/>
                 
