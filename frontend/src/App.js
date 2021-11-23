@@ -19,7 +19,7 @@ function App() {
         <Route path="/login" exact component={Login}/>
         <Route path="/donaciones" exact component={Donaciones}/>
         <Route path="/contactanos" exact component={Contactanos}/>
-                
+        
         </Router>
       <Footer />
       
