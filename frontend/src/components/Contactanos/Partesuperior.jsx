@@ -3,8 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import gatocolorido from '..//..//assets/gatocolorido.jpg'
 import mascotabonita from '../../assets/mascotabonita.jpg'
-import Propaganda from '../../assets/Propaganda.jpg'
+import Propaganda from '../../assets/gatodormido.jpg'
 import '../../styles/Contactanos.css'
+import {Button} from 'react-bootstrap'
+
 
 
 
@@ -36,9 +38,12 @@ export default function Partesuperior() {
     />
     <Carousel.Caption>
       
-      <div className="texto">Si te gusto alguna mascota, o te parece agradable saber informacion sobre está, no dudes en ponerte en contacto con nosotros para realizar la adopcion y obviamente antes de esto tener toda la informacion de tu futura mastocta.</div>
-        <form action="https://www.youtube.com/">
-        <button type="submit" className="btn btn-secondary">Donaciones</button>
+      <div className="texto">Si te gusto alguna mascota, o te parece agradable saber informacion sobre está, no dudes en ponerte en contacto con nosotros para realizar la adopcion y obviamente antes de esto tener toda la informacion de tu futura mascota.</div>
+        <form>
+        <Button 
+        href="/donaciones" 
+        variant="secondary"
+        >Donaciones</Button> 
     </form>
     </Carousel.Caption>
   </Carousel.Item>
