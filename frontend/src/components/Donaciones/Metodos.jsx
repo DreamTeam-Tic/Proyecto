@@ -39,7 +39,7 @@ function Metodos() {
                     <Card.Text>
                         <p className="text-left">Puedes donar insumos como: alimentos, arena para gatos, bolsas biodegradables, juguetes, camas, 
                             accesorios y medicinas. Todo este tipo de donaciones puedes entregarlas en la fundación 42#962 calle siempre. 
-                            Para mayor información ve al siguiente enlace: <a href="/Contáctanos">Contactanos</a></p>
+                            Para mayor información ve al siguiente enlace: <a href="/contactanos">Contactanos</a></p>
                     </Card.Text>
                     
                 </Card.Body>
@@ -51,7 +51,7 @@ function Metodos() {
                     <Card.Title>Pago de veterinaria</Card.Title>
                     <Card.Text>
                     <p className="text-left">Algunas de nuestras mascotas requieren de tratamientos veterinarios y sería de mucha ayuda que nos puedas colaborar
-                        con parte o la totalidad de los costos. Para mayor información ve al siguiente enlace: <a href="/Contáctanos">Contactanos</a>
+                        con parte o la totalidad de los costos. Para mayor información ve al siguiente enlace: <a href="/contactanos">Contactanos</a>
                     </p>
                     </Card.Text>
                    
