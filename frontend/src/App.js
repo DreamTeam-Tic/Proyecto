@@ -12,6 +12,7 @@ import Contactanos from "./components/Contactanos/Contactanos.jsx"
 import Servicios from "./components/Servicios/Servicios.jsx"
 import Formulario from "./components/Servicios/Formulario.jsx"
 import Nosotros from './components/Nosotros/Nosotros.jsx'
+import Mascotas from "./components/Mascotas/Mascotas.jsx"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         
         <Route path="/" exact component={Home}/>
         <Route path="/login" exact component={Login}/> 
+        <Route path="/mascotas" exact component={Mascotas}/>
         <Route path="/donaciones" exact component={Donaciones}/>
         <Route path="/contactanos" exact component={Contactanos}/>
         <Route path="/servicios" exact component={Servicios}/>
