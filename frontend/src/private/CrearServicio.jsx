@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 
 import Swal from 'sweetalert2'
 import Axios from 'axios'
+
+import TablaServicio from './TablaServicio'
 export default function CrearMascota() {
 
 
@@ -14,7 +16,8 @@ export default function CrearMascota() {
 
 
   const guardar = async(e)=>{
-    e.preventDefault()
+
+
     const servicio= {
       nombre,
       descripcion,
@@ -22,6 +25,7 @@ export default function CrearMascota() {
       
 
     }
+
 
     if(nombre===""){
 
@@ -31,6 +35,7 @@ export default function CrearMascota() {
         showConfirmButton:false,
         timer:1500
       })
+
 
     }else if(descripcion===""){
 
@@ -45,9 +50,6 @@ export default function CrearMascota() {
 
       const respuesta = await Axios.post('/servicio/add',servicio)
 
-      console.log(respuesta)
-      
-      
 
 
       Swal.fire({
@@ -60,19 +62,14 @@ export default function CrearMascota() {
       e.target.reset();
       setNombre("");
       setDescripcion("");
-      
-
-
-
-
-
     }
-  }
+
+}
 
 
   return (
 
-  
+  <>
 
 <div className="container mt-4">
         <div className="row">
@@ -147,6 +144,9 @@ export default function CrearMascota() {
         </div>
       </div>
 
+      <TablaServicio/>
+    
+    </>
     
     
       

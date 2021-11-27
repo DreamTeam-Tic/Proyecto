@@ -8,7 +8,7 @@ export default function TablaServicio() {
 
 
     const [servicios, setServicios] = useState([])
-    const [idServicio, setIdServicio]= useState('')
+    const [idServicio, setIdServicio] = useState('')
     const [nombre, setNombre] = useState('')
     const [descripcion, setDescripcion] = useState('')
 
@@ -17,12 +17,10 @@ export default function TablaServicio() {
 
     const handleClose = () => setShow(false);
 
-    const handleShow = () => setShow(true);
-
+    // const handleShow = () => setShow(true);
     useEffect(() => {
 
         obtenerServicios()
-        setTamaño(['Pequeño','Mediano','Grande'])
         
 
     }, [])
@@ -31,7 +29,7 @@ export default function TablaServicio() {
     const obtenerServicios = async () => {
 
         const res = await Axios.get('/servicio/list')
-        
+
 
 
         setServicios(res.data)
@@ -42,76 +40,75 @@ export default function TablaServicio() {
 
     }
 
-    const editarServicio = async(idParam)=>{
+    const editarServicio = async (idParam) => {
 
         setShow(true)
         const id = idParam
-        const res = await Axios.get('/servicio/list/'+id)
+        const res = await Axios.get('/servicio/list/' + id)
 
         console.log(res.data)
         setIdServicio(res.data._id)
         setNombre(res.data.nombre)
         setDescripcion(res.data.descripcion)
-        
+
 
 
     }
 
 
-    const actualizar = async(e)=>{
+    const actualizar = async (e) => {
         e.preventDefault();
 
         const id = idServicio
-        const mascota= {
+        const servicio = {
 
-            idMascota,
+            idServicio,
             nombre,
-            raza,
-            tamaño: tamañoSelect
+            descripcion,
+
 
         }
 
-        const res = await Axios.put('mascota/update/'+id, mascota)
+        const res = await Axios.put('servicio/update/' + id, servicio)
 
         const mensaje = res.status
         console.log(mensaje)
 
-        obtenerMascotas()
+        obtenerServicios()
 
         Swal.fire({
-            icon:'success',
-            title:"Mascota Actualizada",
-            showConfirmButton:false,
-            timer:1500
-          })
+            icon: 'success',
+            title: "Servicio Actualizado",
+            showConfirmButton: false,
+            timer: 1500
+        })
 
         setShow(false)
     }
 
-    const eliminar = async(id)=>{
+    const eliminar = async (id) => {
         // setShow(true)
-        const res = await Axios.delete('/mascota/remove/'+id)
+        const res = await Axios.delete('/servicio/remove/' + id)
 
         const mensaje = res.data.mensaje
 
         Swal.fire({
-            icon:'success',
-            title:mensaje,
-            showConfirmButton:false,
-            timer:1500
-          })
+            icon: 'success',
+            title: mensaje,
+            showConfirmButton: false,
+            timer: 1500
+        })
 
-        obtenerMascotas()
+        obtenerServicios()
     }
 
 
-    const data = mascotas.map((mascotas) => ({
+    const data = servicios.map((servicios) => ({
 
-        id: mascotas._id,
-        nombre: mascotas.nombre,
-        raza: mascotas.raza,
-        tamaño: mascotas.tamaño,
-        imagenMascota: mascotas.imagenMascota
+        id: servicios._id,
+        nombre: servicios.nombre,
+        descripcion: servicios.descripcion,
+
 
     }))
     return (
@@ -119,14 +116,12 @@ export default function TablaServicio() {
         <div className="container">
             <br />
             <MaterialTable
-                title="Mascotas"
+                title="Servicios"
                 columns={[
 
                     { title: 'ID', field: 'id' },
                     { title: 'NOMBRE', field: 'nombre' },
-                    { title: 'RAZA', field: 'raza' },
-                    { title: 'TAMAÑO', field: 'tamaño' },
-                    { title: 'IMAGEN', field: 'imagenMascota' },
+                    { title: 'DESCRIPCION', field: 'descripcion' },
 
 
                 ]}
@@ -135,6 +130,7 @@ export default function TablaServicio() {
                     search: true,
                     actionsColumnIndex: -1,
                     initialPage: 1
+                    
 
                 }}
 
@@ -149,7 +145,7 @@ export default function TablaServicio() {
                     {
                         icon: 'edit',
                         tooltip: 'editar',
-                        onClick: (event, rowData) => editarMascota(rowData.id)
+                        onClick: (event, rowData) => editarServicio(rowData.id)
 
 
 
@@ -159,7 +155,7 @@ export default function TablaServicio() {
 
             <Modal size="lg" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Editar persona</Modal.Title>
+                    <Modal.Title>Editar Servicio</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="container mt-4">
@@ -170,7 +166,7 @@ export default function TablaServicio() {
                                         <i className="fas fa-paw"></i>
                                     </div>
                                     <div className="card-header bg-light text-center">
-                                        <h4>Editar Mascota</h4>
+                                        <h4>Editar Servicio</h4>
                                     </div>
                                     <div className="card-body">
                                         <form >
@@ -178,48 +174,23 @@ export default function TablaServicio() {
 
                                                 <div className="col-md-6">
                                                     <label><strong>Nombre</strong></label>
-                                                    <input type="text" className="form-control required" placeholder="Escribe el nombre de la mascota" onChange={(e) => setNombre(e.target.value)} value={nombre}/>
+                                                    <input type="text" className="form-control required" placeholder="Escribe el nombre del servicio" onChange={(e) => setNombre(e.target.value)} value={nombre} />
                                                 </div>
 
                                                 <div className="col-md-6">
-                                                    <label><strong>Raza</strong></label>
-                                                    <input type="text" className="form-control required" placeholder="Escribe la raza de la mascota" onChange={(e) => setRaza(e.target.value)} value={raza} />
+                                                    <label><strong>Descripcion</strong></label>
+                                                    <input type="text" className="form-control required" placeholder="Escribe la descripción del servicios" onChange={(e) => setDescripcion(e.target.value)} value={descripcion} />
                                                 </div>
-                                                <label className="mt-3"><strong>Tamaño</strong></label>
-                                                <div className="col-md-12 form-floating">
-
-                                                    <select className='form-select pb-2'
-                                                        id="flotingSelectGrid"
-                                                        aria-label="Floating label select example"
-                                                        onChange={(e) => setTamañoSelect(e.target.value)} value={tamañoSelect}>
-
-                                                        {
-                                                            tamaño.map(tamaño => (
-                                                                <option key={tamaño}>
-                                                                    {tamaño}
-
-                                                                </option>
-                                                            ))
-
-
-                                                        }
-                                                    </select>
-                                                    <label htmlFor="flotingSelectGrid">Escoge una Opción</label>
-                                                </div>
-
 
                                                 <div className="mb-3 mt-3">
-                                                    <label htmlFor="formFile" className="form-label"><strong>Ingresa la imagen de la mascota</strong></label>
-                                                    <input type="file" className="form-control" id="formfile"/>
+                                                    <label htmlFor="formFile" className="form-label"><strong>Ingresa la imagen del servicio</strong></label>
+                                                    <input type="file" className="form-control" id="formfile" />
 
                                                 </div>
 
                                             </div>
-                                            <br />
-                                            {/* <button type="submit" className="btn btn btn-success">
 
-                                                <span className="fa fa-save"></span> Guardar
-                                            </button> */}
+
                                         </form>
                                     </div>
                                 </div>
@@ -231,7 +202,7 @@ export default function TablaServicio() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close 
+                        Close
                     </Button>
                     <Button variant="primary" onClick={actualizar} >
                         Save Changes
