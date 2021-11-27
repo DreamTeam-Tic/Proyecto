@@ -4,6 +4,7 @@ import SectionInfo from './SectionInfo'
 import SectionReq from './SectionReq'
 import SectionTips from './SectionTips'
 
+
 function Home() {
     return (
         <div>
@@ -12,6 +13,7 @@ function Home() {
             <SectionTips/>
             <SectionReq/>
             <SectionInfo/>
+            
             
         </div>
     )

@@ -1,17 +1,15 @@
 import React from 'react'
+import ParteMedio from './ParteMedio'
+import Partesuperior from './Partesuperior'
 
 function Contactanos() {
     return (
-        <div className=".container-md">
-            <div className=".col-md-3">
-                holaa
-            </div>
-            <div className=".col-md-6">
-                holaa
-            </div>
-            <div className=".col-md-3">
-                holaa
-            </div>
+        <div>
+            
+            <Partesuperior/>
+            <ParteMedio/>
+
+            
         </div>
     )
 }
