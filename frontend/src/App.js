@@ -12,7 +12,7 @@ import Contactanos from "./components/Contactanos/Contactanos.jsx";
 import Servicios from "./components/Servicios/Servicios";
 import Formulario from "./components/Servicios/Formulario.jsx";
 import Nosotros from './components/Nosotros/Nosotros.jsx';
-
+import Whatsapp from './components/icono/Whatsapp.jsx';
 
 function App() {
   return (
@@ -27,8 +27,9 @@ function App() {
         <Route path="/contactanos" exact component={Contactanos}/>
         <Route path="/servicios" exact component={Servicios}/>
         <Route path="/formulario" exact component={Formulario}/>
-        
+        <Route path="/icono" exact component={Whatsapp}/>
         </Router>
+        <Whatsapp />
       <Footer />
       
     </div>
