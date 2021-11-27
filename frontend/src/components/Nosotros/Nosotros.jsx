@@ -35,10 +35,10 @@ function Nosotros() {
       <div className="d-flex d-flex-row d-flex justify-content-between flex-wrap text-center mt-5">
         <div className="card mb-3" id="card1">
           <div className="row g-0">
-            <div className="col-md-5">
+            <div className="col-md-5 mt-3">
               <img
                 src={objetivo}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -59,10 +59,10 @@ function Nosotros() {
 
         <div className="card mb-3" id="card2">
           <div className="row g-0">
-            <div className="col-md-5">
+            <div className="col-md-5 mt-3">
               <img
                 src={mision}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -79,10 +79,10 @@ function Nosotros() {
         </div>
         <div className="card mb-3" id="card3">
           <div className="row g-0">
-            <div className="col-md-5">
+            <div className="col-md-5 mt-3">
               <img
                 src={vision}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -99,18 +99,18 @@ function Nosotros() {
         </div>
         <div className="card mb-3" id="card1">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div className="col-md-4 ml-3 mt-3">
               <img
                 src={his1}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
-                <p className="card-text fs-6 text-justify ml-3 mr-3 mt-3">
+                <p className="card-text fs-6 text-justify ml-3 mr-3 mt-2">
                   Desde que adoptamos a Max tengo un amigo con el que siempre puedo jugar y vivir muchas aventuras.
                 </p>
               </div>
@@ -120,15 +120,15 @@ function Nosotros() {
 
         <div className="card mb-3" id="card2">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div className="col-md-4 ml-3 mt-3">
               <img
                 src={his2}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
                 <p className="card-text fs-6 text-justify ml-3 mr-3 mt-4">
@@ -140,15 +140,15 @@ function Nosotros() {
         </div>
         <div className="card mb-3" id="card3">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div className="col-md-4 ml-3 mt-3">
               <img
                 src={his3}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
                 <p className="card-text fs-6 text-justify ml-3 mr-3 mt-4">

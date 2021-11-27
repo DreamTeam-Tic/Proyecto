@@ -1,8 +1,9 @@
 #card1, #card2, #card3{
     width: 22rem;
 }
-#imagen{
+#imagen_historia_adopcion{
     height: 100px;
+    border-radius: 8px;
 }
 #imagenNosotros{
     height: 170px;

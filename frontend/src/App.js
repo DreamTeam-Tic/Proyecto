@@ -21,7 +21,6 @@ function App() {
         <Nabvar />
         
         <Route path="/" exact component={Home}/>
-        <Route path="/nosotros" exact component={Nosotros}/>
         <Route path="/login" exact component={Login}/> 
         <Route path="/donaciones" exact component={Donaciones}/>
         <Route path="/contactanos" exact component={Contactanos}/>
