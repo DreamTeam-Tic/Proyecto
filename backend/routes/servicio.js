@@ -21,6 +21,15 @@ const model = require("../models")
 
 const upload = multer({storage: storage});
 
-router.post('/add', upload.single("imagenPrincipal"),servicioController.add)
+router.post('/add', upload.single("imagenPrincipal"),servicioController.add);
+
+router.get('/list', servicioController.list); // listar mascotas
+
+router.get('/query', servicioController.query); // buscar por correo querys atravez de params
+
+router.delete('remove', servicioController.remove);
+router.put('/update', servicioController.update);
+router.put('/enable', servicioController.enable);
+router.put('/disable', servicioController.disable);
 
 module.exports = router

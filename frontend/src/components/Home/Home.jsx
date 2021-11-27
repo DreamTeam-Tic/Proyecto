@@ -13,7 +13,7 @@ function Home() {
             <SectionTips/>
             <SectionReq/>
             <SectionInfo/>
-           
+            
             
         </div>
     )
