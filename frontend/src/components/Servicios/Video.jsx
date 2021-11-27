@@ -1,7 +1,6 @@
 import React   from "react";
 // import video from '../../assets/video.mp4'
-import ReactPlayer from "react-player";
-
+import ReactPlayer from 'react-player/lazy'
 
 function Video() {
     return (
@@ -11,7 +10,7 @@ function Video() {
                 url='https://www.youtube.com/watch?v=8ucHT-qQhOA'
                 width="1200px"
                 height="500px"
-                controls=""
+                reactplayer="true"
             />
         </div>
     )
