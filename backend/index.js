@@ -16,6 +16,7 @@ app.use(express.json());
 //configuracion
 mongoose.Promise = global.Promise;
 const urlDB = 'mongodb+srv://mvinasco99:3122313450mv@cluster0.tjm3l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+// const urlDB = 'mongodb://mvinasco99:3122313450mv@cluster0-shard-00-00.tjm3l.mongodb.net:27017,cluster0-shard-00-01.tjm3l.mongodb.net:27017,cluster0-shard-00-02.tjm3l.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-qh9dvi-shard-0&authSource=admin&retryWrites=true&w=majority';
 mongoose.connect(urlDB)
     .then(mongoose => console.log("db conectada en atlas"))
 
@@ -29,7 +30,7 @@ app.set('PORT', process.env.PORT || 3000);
 
 //uploads
 
-// app.use(express.static("uploads"));
+app.use(express.static("uploads"));
 
 
 

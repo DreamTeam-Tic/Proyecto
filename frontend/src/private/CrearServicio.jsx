@@ -1,61 +1,155 @@
+//import React, { useEffect,useState} from 'react'
+import React, { useState } from 'react'
 
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import Swal from 'sweetalert2'
+import Axios from 'axios'
+export default function CrearMascota() {
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-];
+  const [nombre,setNombre]=useState('')
+  const[descripcion,setDescripcion]=useState('')
+  const[imagenServicio,setimagenServicio]=useState();
+  
 
-function CrearMascota() {
-    return (
 
-        <>
-        <h1 className="mt-4">Crear Servicios</h1>
-        <div className="container mt-lg-5">
-        <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="caption table">
-        <caption>A basic table example with a caption</caption>
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </div>
-    </>
+
+  const guardar = async(e)=>{
+    e.preventDefault()
+    const servicio= {
+      nombre,
+      descripcion,
+      imagenServicio
+      
+
+    }
+
+    if(nombre===""){
+
+      Swal.fire({
+        icon:'error',
+        title:"Debe escribir el nombre del servicio",
+        showConfirmButton:false,
+        timer:1500
+      })
+
+    }else if(descripcion===""){
+
+        Swal.fire({
+            icon:'error',
+            title:"Debe escribir una descripcion del servicio ",
+            showConfirmButton:false,
+            timer:1500
+          })
+
+    }else{
+
+      const respuesta = await Axios.post('/servicio/add',servicio)
+
+      console.log(respuesta)
+      
+      
+
+
+      Swal.fire({
+        icon:'success',
+        title:"Servicio creado correctamente",
+        showConfirmButton:false,
+        timer:1500
+      })
+
+      e.target.reset();
+      setNombre("");
+      setDescripcion("");
+      
+
+
+
+
+
+    }
+  }
+
+
+  return (
+
+  
+
+<div className="container mt-4">
+        <div className="row">
+          <div className="col-md-7  mx-auto">
+            <div className="card">
+              <div className="container text-center fa-5x">
+                <i className="fas fa-plus-circle"></i>
+              </div>
+              <div className="card-header bg-light text-center">
+                <h4>Crear Servicio</h4>
+              </div>
+              <div className="card-body">
+                <form onSubmit={guardar}>
+                  <div className="row">
+
+                    <div className="col-md-12">
+                      <label><strong>Nombre del servicio</strong></label>
+                      <input type="text" className="form-control required" placeholder="Escribe el nombre del servicio" onChange={(e)=>setNombre(e.target.value)} />
+                    </div>
+
+                    <div className="col-md-12 mt-3">
+                      <label><strong>Descripción</strong></label>
+                      <textarea className="form-control required" placeholder="Escribe la descripción del servicio" onChange={(e)=>setDescripcion(e.target.value)} ></textarea>
+                    </div>
+
+                    <div className="mb-3 mt-3">
+                        <label for="formFile" className="form-label"><strong>Ingresa la imagen del servicio</strong></label>
+                        <input type="file" className="form-control" id="formfile" onChange={(e)=>setimagenServicio(e.target.files[0])}/>
+
+                    </div>
+
+
+                    {/* <div className="col-md-6">
+                      <label>Cedula</label>
+                      <input type="text" className="form-control required" />
+                    </div> */}
+
+
+                    {/* <div className="col-md-6">
+                      <label>Telefono</label>
+                      <input type="text" className="form-control required" />
+                    </div> */}
+
+                    {/* <div className="col-md-12 mt-4">
+                      <label><strong>Tamaño</strong></label>
+
+                      <select className='form-control' onChange={(e) => setTamañoSelect(e.target.value)}>
+
+                        {
+                            tamaño.map(tamaño => (
+                                <option key={tamaño}>
+                                    {tamaño}
+
+                                </option>
+                            ))
+
+
+                        }
+                        </select>
+                    </div> */}
+
+                  </div>
+                    <br />
+                  <button type="submit" className="btn btn btn-success">
+                      
+                    <span className="fa fa-save"></span> Guardar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    
+      
+   
   );
-
 }
-
-
-export default CrearMascota

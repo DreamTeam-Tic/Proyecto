@@ -1,7 +1,4 @@
 import React from 'react'
-import CrearMascota from './CrearMascota'
-import CrearServicio from './CrearServicio'
-import { useNavigate } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 
 function HomeAdmin() {
@@ -16,8 +13,9 @@ function HomeAdmin() {
 
 
     return (
-        <div>
+        <div className="mt-5 ">
             <h1>Hola {nombre}</h1>
+            <div className="container d-flex justify-content-evendly justify-content-center">
             <Button
                 className="btn btn-primary"
                 href="/crearmascota"
@@ -38,7 +36,7 @@ function HomeAdmin() {
                 Cerrar Sesión
             </Button>
 
-
+            </div>
         </div>
     )
 }
