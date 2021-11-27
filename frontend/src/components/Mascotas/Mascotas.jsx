@@ -19,7 +19,6 @@ const theme = createTheme();
 export default function Album() {
 
     return (
-
         <div className="container mt-5" >
         <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
             <option selected>¿Que quieres Adoptar?</option>
@@ -27,13 +26,13 @@ export default function Album() {
             <option value="2">Gatos</option>
             <option value="3">Perros</option>
         </select>
-    
+    console
     <ThemeProvider theme={theme}>
       <CssBaseline />
       
       <main>
         {/* Hero unit */}
-       
+        
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>

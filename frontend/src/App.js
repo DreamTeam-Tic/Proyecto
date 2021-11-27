@@ -31,16 +31,12 @@ function App() {
       <Router>
         
         <Route path="/" exact component={Home}/>
-<<<<<<< HEAD
-        <Route path="/login" exact component={Login}/> 
-=======
         <Route path="/login" exact component={Login}/>
         <Route path="/mascotas" exact component={Mascotas}/>
         <PrivateRouter exact path="/homeadmin" exact component={HomeAdmin}/>
         <PrivateRouter exact path="/crearmascota" exact component={CrearMascota}/>
         <PrivateRouter exact path="/crearservicio" exact component={CrearServicio}/>
         <Route path="/nosotros" exact component={Nosotros}/>
->>>>>>> 203c0382d3975f432f8f29580290c727d1548c41
         <Route path="/donaciones" exact component={Donaciones}/>
         <Route path="/contactanos" exact component={Contactanos}/>
         <Route path="/servicios" exact component={Servicios}/>
