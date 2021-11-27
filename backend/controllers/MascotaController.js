@@ -137,32 +137,26 @@ module.exports = {
 
     },
     
-    add : async (req, res, next) => {
+    add : async (req, res) => {
+
+        const body = req.body
         
         try {
-
-            let chequear = await models.Mascota.findOne({
-                nombre: req.body.nombre
-
-
-            });
-            if (!chequear) {
-                const registro = await models.Mascota.create(req.body);
-                res.status(200).json(registro);
-            } else {
-                res.status(400).send({
-                    message: "Ya esta creado una categoria con este nombre"
-                })
+            if(req.file != undefined){
+                body.imagenMascota = "/" + req.file.filename;
+                console.log(body.imagenMascota)
             }
-            
-        } catch (error) {
-            res.status(500).send({
-                message: "Ocurrio un error interno"
-            });
-            next(error);
-        }
+            const registro = await models.Mascota.create(body);
+            res.status(200).json(registro);
 
-    },
+            } catch (error) {
+
+                return res.status(500).json({
+                    message:"Ocurrio algo inesperado",    
+                    error,
+                });
+            }
+        },
 
     // remove: async (req, res, next) => {
 
@@ -201,7 +195,6 @@ module.exports = {
                 err
             })
         }
-
     }
 
-}
+};
