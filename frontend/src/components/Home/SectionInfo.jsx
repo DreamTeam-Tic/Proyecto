@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../styles/info.css'
-import { Card, Button } from 'react-bootstrap';
 import imgInfo from '../../assets/imgInfo.jpg'
 function SectionInfo() {
     return (
