@@ -32,6 +32,7 @@ function App() {
         <Whatsapp />
       <Footer />
       
+      
     </div>
   )
 }

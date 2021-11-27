@@ -5,12 +5,12 @@ import '../../styles/icono.css'
 function whatsapp() {
     return (
         <div>
-                            <div className="whatsapp">
-                            <a href="https://wa.me/message/AMSUNBC5GBYDI1">
-                                <img src={icono} width="50" height="50"></img>
-                            </a>
-                    </div> 
-        </div>
+            <div className="whatsapp">
+            <a href="https://wa.me/message/AMSUNBC5GBYDI1">
+                <img src={icono} width="50" height="50"></img>
+            </a>
+        </div> 
+    </div>
     )
 }
 
