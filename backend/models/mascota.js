@@ -31,6 +31,9 @@ const mascotaSchema = new Schema({
         enum : ['Pequeño', 'Mediano', 'Grande'],
 
     },
+    imagenMascota: {
+        type:String
+    },
 
     estado: {
         type : Number,

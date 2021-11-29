@@ -1,0 +1,10 @@
+#card1, #card2, #card3{
+    width: 22rem;
+}
+#imagen{
+    height: 100px;
+}
+#imagenNosotros{
+    height: 170px;
+    border-radius: 8px;
+}
