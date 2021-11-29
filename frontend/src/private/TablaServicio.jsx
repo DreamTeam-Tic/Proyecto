@@ -44,7 +44,7 @@ export default function TablaServicio() {
 
         setShow(true)
         const id = idParam
-        const res = await Axios.get('/servicio/list/' + id)
+        const res = await Axios.get('/servicio/list/'+id)
 
         console.log(res.data)
         setIdServicio(res.data._id)
