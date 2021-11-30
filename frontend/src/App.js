@@ -22,7 +22,7 @@ import Contactanos from "./components/Contactanos/Contactanos.jsx";
 import Formulario from "./components/Servicios/Formulario.jsx";
 import Nosotros from './components/Nosotros/Nosotros.jsx';
 import TablaMascota from "./private/TablaMascota";
-
+import FormularioAdopta from "./components/Servicios/FormularioAdopta";
 import Whatsapp from './components/icono/Whatsapp.jsx';
 
 function App() {
@@ -47,12 +47,11 @@ function App() {
         <Route path="/servicios" exact component={Servicios}/>
         <Route path="/formulario" exact component={Formulario}/>
         <Route path="/icono" exact component={Whatsapp}/>
-        </Router>
-        <Whatsapp />
-      
-      <Footer />
-      
-    </div>
+        <Route path="/formularioadopta" exact component={FormularioAdopta}/>
+      </Router>
+    <Whatsapp /> 
+    <Footer />
+  </div>
   )
 }
 
