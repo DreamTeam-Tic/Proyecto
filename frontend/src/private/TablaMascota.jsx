@@ -13,7 +13,7 @@ export default function TablaMascota() {
     const [tamaño, setTamaño] = useState([])
     const [tamañoSelect, setTamañoSelect] = useState([])
     const [raza, setRaza] = useState('')
-    // const [imagenMascota, setimagenMascota] = useState();
+    
 
 
     const [show, setShow] = useState(false);
@@ -59,11 +59,10 @@ export default function TablaMascota() {
         setNombre(res.data.nombre)
         setTamañoSelect(res.data.tamaño)
         setRaza(res.data.raza)
-        // setimagenMascota(res.data.imagenMascota)
+        //setimagenMascota(res.data.imagenMascota)
 
 
     }
-
 
     const actualizar = async(e)=>{
         e.preventDefault();
@@ -133,7 +132,7 @@ export default function TablaMascota() {
                     { title: 'NOMBRE', field: 'nombre' },
                     { title: 'RAZA', field: 'raza' },
                     { title: 'TAMAÑO', field: 'tamaño' },
-                    { title: 'IMAGEN', field: 'imagenMascota' },
+                   // { title: 'IMAGEN', field: 'imagenMascota' },
 
 
                 ]}

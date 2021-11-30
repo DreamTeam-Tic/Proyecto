@@ -11,7 +11,7 @@ export default function CrearMascota() {
   const[tamaño,setTamaño]=useState([])
   const[tamañoSelect,setTamañoSelect]=useState([])
   const[raza,setRaza]=useState('')
-  const[imagenMascota,setimagenMascota]=useState();
+  const [baseImage, setBaseImage] = useState("");
 //   const[imagenEscogida,setimagenEscogida]=useState(false);
   
 
@@ -21,15 +21,39 @@ export default function CrearMascota() {
     setTamañoSelect('Pequeño')
 
   },[])
+      
+  const setimagenMascota = async (e) =>{
+        
+    const file= e.target.files[0];
+    const base64 = await convertBase64(file);
+    // console.log(base64);
+    setBaseImage(base64)
+    
+}
+const convertBase64=(file)=>{
+  return new Promise ((resolve, reject)=>{
+
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () =>{
+          resolve(fileReader.result)
+      }
+      fileReader.oneerror = (error)=>{
+          reject(error)
+      }
+  })
+}
 
 
   const guardar = async(e)=>{
-    // e.preventDefault()
+     e.preventDefault()
     const mascota= {
       nombre,
       raza,
       tamaño:tamañoSelect,
-      imagenMascota
+      //imagenMascota
+      imagenMascota: baseImage
 
     }
 
@@ -56,9 +80,6 @@ export default function CrearMascota() {
       const respuesta = await Axios.post('/mascota/add',mascota)
 
       console.log(respuesta)
-      
-      
-
 
       Swal.fire({
         icon:'success',
@@ -70,7 +91,7 @@ export default function CrearMascota() {
       e.target.reset();
       setNombre("");
       setRaza("");
-      setimagenMascota("");
+      //setimagenMascota("");
       
 
 
@@ -133,16 +154,20 @@ export default function CrearMascota() {
 
                     <div className="mb-3 mt-3">
                         <label htmlFor="formFile" className="form-label"><strong>Ingresa la imagen de la mascota</strong></label>
-                        <input type="file" className="form-control" id="formfile" onChange={(e)=>setimagenMascota(e.target.files[0])}/>
+                        <input type="file" className="form-control" id="formfile" accept=".jpg, .jpeg, .png"  onChange={(e) => {setimagenMascota(e);}} />
 
                     </div>
 
                   </div>
                     <br />
+                    <img  classname="rounded" src={baseImage} alt="" width="400px"/>
+                    <br />
                   <button type="submit" className="btn btn btn-success">
                       
                     <span className="fa fa-save"></span> Guardar
                   </button>
+                  <br />
+                  
                 </form>
               </div>
             </div>

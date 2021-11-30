@@ -1,8 +1,13 @@
 #card1, #card2, #card3{
-    width: 22rem;
+    width: 34rem;
+}
+#contImagenNosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #imagen_historia_adopcion{
-    height: 100px;
+    height: 170px;
     border-radius: 8px;
 }
 #imagenNosotros{
