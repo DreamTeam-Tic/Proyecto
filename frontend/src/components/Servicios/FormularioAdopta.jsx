@@ -6,13 +6,11 @@ import {useState} from 'react';
 
 function FormularioAdopta() {
    
-
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
     const [correo, setCorreo] = useState('')
     const [numero, setNumero] = useState('')
   
-
     const enviar = async (event)=>{
         
         event.preventDefault();
@@ -20,7 +18,6 @@ function FormularioAdopta() {
         const res = await Axios.post('/adoptante/add', adoptante);
         console.log(res);
         
-
         if (res.status!== 200) {
 
             
@@ -32,8 +29,7 @@ function FormularioAdopta() {
               timer: 1500
               
             })
-      
-            
+               
             
           }else {
             
@@ -54,8 +50,6 @@ function FormularioAdopta() {
 
 
     }
-
-
 
     return (
     <div>

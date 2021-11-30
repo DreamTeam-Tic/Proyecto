@@ -46,12 +46,10 @@ function App() {
         <Route path="/formulario" exact component={Formulario}/>
         <Route path="/icono" exact component={Whatsapp}/>
         <Route path="/formularioadopta" exact component={FormularioAdopta}/>
-        </Router>
-        <Whatsapp />
-      
-      <Footer />
-      
-    </div>
+      </Router>
+    <Whatsapp /> 
+    <Footer />
+  </div>
   )
 }
 
