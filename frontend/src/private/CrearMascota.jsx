@@ -75,6 +75,7 @@ const convertBase64=(file)=>{
     } else {
 
       const respuesta = await Axios.post('/mascota/add',mascota)
+      console.log(respuesta)
       Swal.fire({
         icon: 'success',
         title: "Mascota creada correctamente",
