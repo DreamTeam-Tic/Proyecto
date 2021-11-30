@@ -6,12 +6,13 @@ import Axios from 'axios'
 export default function CrearMascota() {
 
 
-  const [nombre, setNombre] = useState('')
-  const [tamaño, setTamaño] = useState([])
-  const [tamañoSelect, setTamañoSelect] = useState([])
-  const [raza, setRaza] = useState('')
-  // const[imagenMascota,setimagenMascota]=useState();
-  const [baseImage, setBaseImage] = useState("")
+  const [nombre,setNombre]=useState('')
+  const[tamaño,setTamaño]=useState([])
+  const[tamañoSelect,setTamañoSelect]=useState([])
+  const[raza,setRaza]=useState('')
+  const [baseImage, setBaseImage] = useState("");
+//   const[imagenEscogida,setimagenEscogida]=useState(false);
+  
 
 
 
@@ -19,17 +20,30 @@ export default function CrearMascota() {
     setTamaño(['Pequeño', 'Mediano', 'Grande'])
     setTamañoSelect('Pequeño')
 
-  }, [])
-
-  const setimagenMascota = async (e) => {
-
-    const file = e.target.files[0];
+  },[])
+      
+  const setimagenMascota = async (e) =>{
+        
+    const file= e.target.files[0];
     const base64 = await convertBase64(file);
     // console.log(base64);
     setBaseImage(base64)
+    
+}
+const convertBase64=(file)=>{
+  return new Promise ((resolve, reject)=>{
 
-  }
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
 
+      fileReader.onload = () =>{
+          resolve(fileReader.result)
+      }
+      fileReader.oneerror = (error)=>{
+          reject(error)
+      }
+  })
+}
 
   const convertBase64 = (file) => {
     return new Promise((resolve, reject) => {
@@ -96,11 +110,6 @@ export default function CrearMascota() {
       setRaza("");
       // setimagenMascota("");
 
-
-
-
-
-
     }
   }
 
@@ -156,20 +165,21 @@ export default function CrearMascota() {
 
 
                     <div className="mb-3 mt-3">
-                      <label htmlFor="formFile" className="form-label"><strong>Ingresa la imagen de la mascota</strong></label>
-                      <input type="file" className="form-control" id="formfile" onChange={(e) => {setimagenMascota(e);}} />
+                        <label htmlFor="formFile" className="form-label"><strong>Ingresa la imagen de la mascota</strong></label>
+                        <input type="file" className="form-control" id="formfile" accept=".jpg, .jpeg, .png"  onChange={(e) => {setimagenMascota(e);}} />
 
                     </div>
 
                   </div>
-                  <br />
-
-                  <img src={baseImage} alt="Vista Previa" width="400px"/>
-                  <br/>
+                    <br />
+                    <img  classname="rounded" src={baseImage} alt="" width="400px"/>
+                    <br />
                   <button type="submit" className="btn btn btn-success">
 
                     <span className="fa fa-save"></span> Guardar
                   </button>
+                  <br />
+                  
                 </form>
               </div>
             </div>

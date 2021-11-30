@@ -13,7 +13,7 @@ function Nosotros() {
     <div className="container mt-5">
       <div className="card mb-3">
         <div className="row g-0">
-          <div className="col-md-4 mt-4">
+          <div className="col-md-4 mt-4 pl-2 " id="contImagenNosotros">
             <img
               src={nosotrosImg}
               id="imagenNosotros"
@@ -24,8 +24,8 @@ function Nosotros() {
           <div className="col-md-8">
             <div className="card-body">
               <h5 className="card-title fs-2">Quienes Somos</h5>
-              <p className="card-text fs-5 text-justify ml-5 mr-5 mt-4 mb-2">
-                Nosotros como fundación nos dedicamos al rescate y adopción de perros y gatos que carecen de un hogar y una familia. Pets For Always les brinda a aquellos animalitos que no han contado con mucha suerte la oportunidad de encontrar una familia que esté dispuesta a brindarles todo el amor y cuidado que merecen.
+              <p className="card-text fs-5 text-justify ml-3 mr-5 mt-4 mb-2">
+                Nosotros como fundación nos dedicamos al rescate y adopción de perros y gatos que carecen de un hogar y una familia. Pets For Alwasy les brinda a aquellos animalitos que no han contado con mucha suerte la oportunidad de encontrar una familia que esté dispuesta a brindarles todo el amor y cuidado que merecen.
             </p>
             </div>
           </div>
@@ -35,10 +35,10 @@ function Nosotros() {
       <div className="d-flex d-flex-row d-flex justify-content-between flex-wrap text-center mt-5">
         <div className="card mb-3" id="card1">
           <div className="row g-0">
-            <div className="col-md-5">
+            <div className="col-md-5 mt-3" id="contImagenNosotros">
               <img
                 src={objetivo}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -59,10 +59,10 @@ function Nosotros() {
 
         <div className="card mb-3" id="card2">
           <div className="row g-0">
-            <div className="col-md-5">
+            <div className="col-md-5 mt-3 " id="contImagenNosotros">
               <img
                 src={mision}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -79,10 +79,10 @@ function Nosotros() {
         </div>
         <div className="card mb-3" id="card3">
           <div className="row g-0">
-            <div className="col-md-5">
+            <div className="col-md-5 mt-3" id="contImagenNosotros">
               <img
                 src={vision}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -99,19 +99,19 @@ function Nosotros() {
         </div>
         <div className="card mb-3" id="card1">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div className="col-md-4 ml-3 my-3" id="contImagenNosotros">
               <img
                 src={his1}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
-                <p className="card-text fs-6 text-justify ml-3 mr-3 mt-3">
-                  Desde que adoptamos a Max tengo un amigo con el que siempre puedo jugar y vivir muchas aventuras.
+                <p className="card-text fs-6 text-justify ml-3 mr-3 mt-4">
+                  Desde que adoptamos a Max tengo un amigo con el que siempre puedo jugar y vivir muchas aventuras. Él es muy divertido, le encanta jugar conmigo todo el tiempo y siempre estamos juntos. Aunque muerde mis juguetes, eso no me gusta.
                 </p>
               </div>
             </div>
@@ -120,15 +120,15 @@ function Nosotros() {
 
         <div className="card mb-3" id="card2">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div className="col-md-4 ml-3 mt-3" id="contImagenNosotros">
               <img
                 src={his2}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
                 <p className="card-text fs-6 text-justify ml-3 mr-3 mt-4">
@@ -140,15 +140,15 @@ function Nosotros() {
         </div>
         <div className="card mb-3" id="card3">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div className="col-md-4 ml-3 mt-3" id="contImagenNosotros">
               <img
                 src={his3}
-                id="imagen"
+                id="imagen_historia_adopcion"
                 className="img-fluid rounded-start"
                 alt="..."
               />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
                 <p className="card-text fs-6 text-justify ml-3 mr-3 mt-4">

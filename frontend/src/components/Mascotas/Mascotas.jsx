@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import Swal from 'sweetalert2'
 import Axios from 'axios'
+=======
+// import * as React from 'react';
+import React, { useState, useEffect } from 'react'
+import Button from '@mui/material/Button';
+>>>>>>> 415b2bc97a598d1b7e6443cffe231673a8574fcc
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -11,6 +17,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+<<<<<<< HEAD
 import dog1 from '../../assets/dog1.jpg'
 const cards = [1, 2, 3, 4, 5, 6];
 const theme = createTheme();
@@ -177,41 +184,93 @@ export default function TablaMascota() {
                         </div>
 
                         <ThemeProvider theme={theme}>
+=======
+import dog1 from '../../assets/dog1.jpeg'
+import Axios from 'axios'
+import '../../styles/Mascotas.css'
+
+
+export default function Album() {
+
+  let [tam, setTamSelect] =useState([])
+ 
+  useEffect(() => {
+    obtenerMascotas()
+}, [])
+
+  const obtenerMascotas = async () => {
+
+    // const id = sessionStorage.getItem('_id')
+    // const token = sessionStorage.getItem('token')
+    const res = await Axios.get('/mascota/list')
+    const Mlist = res.data
+    //console.log(Mlist[0].nombre)
+    setTamSelect(Mlist)
+
+}
+const imgMascota = tam.map((mascotas)=>({
+  imagenMascota: tam.imagenMascota
+}))
+
+
+const cards = tam;
+const theme = createTheme();
+const a = "http://localhost:3000"
+const b= "/imagenMascota_1637805604995_luigi.jpeg"
+
+
+    return (
+        <div className="container mt-5" >
+    <ThemeProvider theme={theme}>
+>>>>>>> 415b2bc97a598d1b7e6443cffe231673a8574fcc
       <CssBaseline />
       
       <main>
         {/* Hero unit */}
-       
+        
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
+              
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
+                  
+                  {console.log(card.nombre)}
                   <CardMedia
                     component="img"
                     sx={{
                       // 16:9
-                      pt: '20.25%',
+                     // pt:'20.23%',
+                      
                     }}
-                    image={dog1}
+                    //"http://localhost:3000/imagenMascota_1637805604995_luigi.jpeg"
+                    //image={`${a}${card.imagenMascota}`}
+                    image={card.imagenMascota}
                     alt="random"
+                    style={{height:"200px"}}
                   />
+                  
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2" >
+<<<<<<< HEAD
                       Heading
                       
+=======
+                      {card.nombre}
+>>>>>>> 415b2bc97a598d1b7e6443cffe231673a8574fcc
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      {card.raza}
+                      <br/>
+
+                      {card.tamaño}
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="large" >Adoptar!</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -221,6 +280,7 @@ export default function TablaMascota() {
       </main>
       
     </ThemeProvider>
+<<<<<<< HEAD
                     </div>
 
 
@@ -229,4 +289,9 @@ export default function TablaMascota() {
     )
 
 
+=======
+    
+    </div> 
+    );
+>>>>>>> 415b2bc97a598d1b7e6443cffe231673a8574fcc
 }

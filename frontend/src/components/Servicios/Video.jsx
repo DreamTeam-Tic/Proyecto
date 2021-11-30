@@ -1,7 +1,6 @@
 import React   from "react";
 // import video from '../../assets/video.mp4'
-import ReactPlayer from "react-player";
-
+import ReactPlayer from 'react-player/lazy'
 
 function Video() {
     return (
