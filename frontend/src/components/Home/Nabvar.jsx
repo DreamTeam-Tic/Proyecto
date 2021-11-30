@@ -14,6 +14,14 @@ function Nabvar() {
     }
 
   }, [])
+  const [hide, setHide]= useState(false)
+  useEffect(() =>{
+
+    if (sessionStorage.getItem('token')){
+      setHide(true)
+    }
+
+  }, [])
 
   const salir =()=>{
     sessionStorage.clear()
@@ -46,23 +54,15 @@ function Nabvar() {
             <Nav.Link href="/nosotros">Nosotros</Nav.Link>
             <Nav.Link href="/contactanos">Contáctanos</Nav.Link>
             <Nav.Link hidden={show} href="/homeadmin">Administracion</Nav.Link>
-              <div className="container" style={{width:"60vh"}}>
-                
+              <div className="container" style={{width:"40vh"}}>
               </div>
-            <Nav.Link href="/login" className='d-flex flex-row-reverse justify-content-center fas fa-user-shield mt-1 '> <span className="  mr-2 align-items-end"> Login </span> </Nav.Link>
-        
-
+            <Nav.Link  href="/login" className='d-flex flex-row-reverse justify-content-center fas fa-user-shield mt-1'> <span hidden={hide}  className="  mr-2 align-items-end"> Login </span> </Nav.Link>
             <Nav.Link hidden={show} onClick={salir} href="#">Salir</Nav.Link>
-            </Nav>
-            
-
-            
+            </Nav>         
         </Navbar.Collapse>
       </Container>
     </Navbar>
     </div>
-
-
     );
 }
 

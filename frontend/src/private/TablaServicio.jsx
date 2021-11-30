@@ -163,7 +163,7 @@ export default function TablaServicio() {
                             <div className="col-md-7  mx-auto">
                                 <div className="card">
                                     <div className="container text-center fa-5x">
-                                        <i className="fas fa-paw"></i>
+                                        <i className="fas fa-plus-circle"></i>
                                     </div>
                                     <div className="card-header bg-light text-center">
                                         <h4>Editar Servicio</h4>
@@ -202,10 +202,10 @@ export default function TablaServicio() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Cerrar
                     </Button>
                     <Button variant="primary" onClick={actualizar} >
-                        Save Changes
+                        Guardar Cambios
                     </Button>
                 </Modal.Footer>
             </Modal>

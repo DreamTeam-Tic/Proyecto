@@ -50,6 +50,8 @@ export default function CrearMascota() {
 
       const respuesta = await Axios.post('/servicio/add',servicio)
 
+      console.log(respuesta)
+
 
 
       Swal.fire({
