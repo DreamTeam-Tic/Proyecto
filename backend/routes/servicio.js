@@ -23,7 +23,7 @@ const upload = multer({storage: storage});
 
 router.post('/add', upload.single("imagenPrincipal"),servicioController.add);
 
-router.get('/list/:id', servicioController.list); // listar mascotas
+router.get('/list/:id', servicioController.listId); // listar mascotas
 router.get('/list', servicioController.list); // listar mascotas
 
 router.get('/query', servicioController.query); // buscar por correo querys atravez de params

@@ -11,7 +11,7 @@ function Video() {
                 url='https://www.youtube.com/watch?v=8ucHT-qQhOA'
                 width="1200px"
                 height="500px"
-                controls=""
+                reactplayer="true"
             />
         </div>
     )

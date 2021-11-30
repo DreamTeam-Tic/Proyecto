@@ -20,23 +20,23 @@ function Footer() {
           <MDBRow md="3">
             <div className={Row}>
             <div className="d-flex justify-content-center">
-            <a target="_blank" href="https://es-la.facebook.com/">  
+            <a target="_blank" rel="noreferrer" href="https://es-la.facebook.com/">  
             <img src = {Face} width="25" height="25" alt='Facebook'/>
             </a>
             
             <p>&nbsp;&nbsp;&nbsp;</p>
             <p>&nbsp;&nbsp;&nbsp;</p>
-            <a target="_blank" href="https://www.instagram.com/?hl=es">
+            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/?hl=es">
             <img src = {Instagram} width="25" height="25" alt='Instagram'/>
             </a>
             <p>&nbsp;&nbsp;&nbsp;</p>
             <p>&nbsp;&nbsp;&nbsp;</p>
-            <a target="_blank" href="https://twitter.com/?lang=es"> 
+            <a target="_blank" rel="noreferrer" href="https://twitter.com/?lang=es"> 
             <img src = {Twitter} width="25" height="25" alt='Twitter'/>
             </a>
             <p>&nbsp;&nbsp;&nbsp;</p>
             <p>&nbsp;&nbsp;&nbsp;</p>
-            <a target="_blank" href="https://github.com/DreamTeam-Tic/"> 
+            <a target="_blank" rel="noreferrer" href="https://github.com/DreamTeam-Tic/"> 
             <img src = {Github} width="25" height="25" alt='Github'/>
             </a>
             </div>

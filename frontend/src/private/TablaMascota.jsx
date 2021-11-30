@@ -20,8 +20,6 @@ export default function TablaMascota() {
 
     const handleClose = () => setShow(false);
 
-    const handleShow = () => setShow(true);
-
     useEffect(() => {
 
         obtenerMascotas()
@@ -33,8 +31,6 @@ export default function TablaMascota() {
 
     const obtenerMascotas = async () => {
 
-        const id = sessionStorage.getItem('_id')
-        const token = sessionStorage.getItem('token')
         const res = await Axios.get('/mascota/list')
 
         
@@ -133,7 +129,7 @@ export default function TablaMascota() {
                     { title: 'NOMBRE', field: 'nombre' },
                     { title: 'RAZA', field: 'raza' },
                     { title: 'TAMAÑO', field: 'tamaño' },
-                    { title: 'IMAGEN', field: 'imagenMascota' },
+                    // { title: 'IMAGEN', field: 'imagenMascota' },
 
 
                 ]}
@@ -238,10 +234,10 @@ export default function TablaMascota() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close 
+                        Cerrar
                     </Button>
                     <Button variant="primary" onClick={actualizar} >
-                        Save Changes
+                        Guardar Cambios
                     </Button>
                 </Modal.Footer>
             </Modal>

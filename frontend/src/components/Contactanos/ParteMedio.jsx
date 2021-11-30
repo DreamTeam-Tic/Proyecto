@@ -21,13 +21,13 @@ function ParteMedio() {
             <div className="col-md-8">
               <div className="card-body align-center">
                 <h5 className="card-title fs-3"><br/>Nuestra Fundacion</h5>
-                <p className="card-text fs-4 text-left">
-                  <div className="text-start ml-5" id="text">
+                
+                  <div className=" card-text fs-4 text-left text-start ml-5" id="text">
                     <p>
                     
                         <br/>Si tienes ganas de saber sobre nuestro hogar de mascotas, puedes encontrarnos 
                         en la Direccion: 42#962 calle siempre, al lado de la iglesia de urabanes en la ciudad de barranquilla. <br/>
-                        </p>
+                    </p>
                     
                     <ol className="mt-5">
                         <li>Direccion: 42#962 calle siempre</li>
@@ -36,7 +36,7 @@ function ParteMedio() {
                         <li>Siguenos en Instragram como: adopta_feliz o en facebook como adoptamoscompañeros</li>
                     </ol>
                   </div>
-                </p>
+                
               </div>
             </div>
           </div>

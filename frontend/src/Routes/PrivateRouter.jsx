@@ -1,8 +1,7 @@
 import React from 'react'
-import HomeAdmin from '../private/HomeAdmin'
-import { Route, Router, Redirect} from 'react-router'
-import CrearMascota from '../private/CrearMascota'
-import CrearServicio from '../private/CrearServicio'
+
+import { Route,  Redirect} from 'react-router'
+
 
 
 // const PrivateRoute =(props) => {

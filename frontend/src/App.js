@@ -9,6 +9,7 @@ import Nabvar from "./components/Home/Nabvar.jsx";
 import Home from "./components/Home/Home"
 import Login from "./components/Login/Login.jsx"
 import Mascotas from './components/Mascotas/Mascotas.jsx'
+import Galeria from './components/Mascotas/Galeria'
 import Servicios from "./components/Servicios/Servicios.jsx"
 import HomeAdmin from "./private/HomeAdmin.jsx"
 import CrearMascota from "./private/CrearMascota.jsx"
@@ -34,11 +35,12 @@ function App() {
         
         <Route path="/" exact component={Home}/>
         <Route path="/login" exact component={Login}/>
-        <Route path="/mascotas" exact component={Mascotas}/>
-        <PrivateRouter exact path="/homeadmin" exact component={HomeAdmin}/>
-        <PrivateRouter exact path="/crearmascota" exact component={CrearMascota}/>
-        <PrivateRouter exact path="/crearservicio" exact component={CrearServicio}/>
-        <PrivateRouter exact path="/tablamascota" exact component={TablaMascota}/>
+        <Route path="/mascotas" exact component={Galeria}/>
+        <Route path="/mascotas2" exact component={Mascotas}/>
+        <PrivateRouter  path="/homeadmin" exact component={HomeAdmin}/>
+        <PrivateRouter  path="/crearmascota" exact component={CrearMascota}/>
+        <PrivateRouter  path="/crearservicio" exact component={CrearServicio}/>
+        <PrivateRouter  path="/tablamascota" exact component={TablaMascota}/>
         <Route path="/nosotros" exact component={Nosotros}/>
         <Route path="/donaciones" exact component={Donaciones}/>
         <Route path="/contactanos" exact component={Contactanos}/>

@@ -25,7 +25,7 @@ function Nosotros() {
             <div className="card-body">
               <h5 className="card-title fs-2">Quienes Somos</h5>
               <p className="card-text fs-5 text-justify ml-5 mr-5 mt-4 mb-2">
-                Nosotros como fundación nos dedicamos al rescate y adopción de perros y gatos que carecen de un hogar y una familia. Pets For Alwasy les brinda a aquellos animalitos que no han contado con mucha suerte la oportunidad de encontrar una familia que esté dispuesta a brindarles todo el amor y cuidado que merecen.
+                Nosotros como fundación nos dedicamos al rescate y adopción de perros y gatos que carecen de un hogar y una familia. Pets For Always les brinda a aquellos animalitos que no han contado con mucha suerte la oportunidad de encontrar una familia que esté dispuesta a brindarles todo el amor y cuidado que merecen.
             </p>
             </div>
           </div>
