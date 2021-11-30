@@ -35,8 +35,8 @@ function App() {
         
         <Route path="/" exact component={Home}/>
         <Route path="/login" exact component={Login}/>
-        <Route path="/mascotas" exact component={Galeria}/>
-        <Route path="/mascotas2" exact component={Mascotas}/>
+        <Route path="/mascotas" exact component={Mascotas}/>
+        {/* <Route path="/mascotas2" exact component={Mascotas}/> */}
         <PrivateRouter  path="/homeadmin" exact component={HomeAdmin}/>
         <PrivateRouter  path="/crearmascota" exact component={CrearMascota}/>
         <PrivateRouter  path="/crearservicio" exact component={CrearServicio}/>

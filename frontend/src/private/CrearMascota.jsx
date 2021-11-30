@@ -45,21 +45,6 @@ const convertBase64=(file)=>{
   })
 }
 
-  const convertBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-
-      fileReader.onload = () => {
-        resolve(fileReader.result)
-      }
-      fileReader.oneerror = (error) => {
-        reject(error)
-      }
-    })
-  }
-
 
   const guardar = async (e) => {
     e.preventDefault()
