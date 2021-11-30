@@ -9,16 +9,13 @@ import Nabvar from "./components/Home/Nabvar.jsx";
 import Home from "./components/Home/Home"
 import Login from "./components/Login/Login.jsx"
 import Mascotas from './components/Mascotas/Mascotas.jsx'
-import Galeria from './components/Mascotas/Galeria'
 import Servicios from "./components/Servicios/Servicios.jsx"
 import HomeAdmin from "./private/HomeAdmin.jsx"
 import CrearMascota from "./private/CrearMascota.jsx"
 import CrearServicio from "./private/CrearServicio.jsx"
 import PrivateRouter from './Routes/PrivateRouter.jsx'
-
 import Donaciones from "./components/Donaciones/Donaciones";
 import Contactanos from "./components/Contactanos/Contactanos.jsx";
-
 import Formulario from "./components/Servicios/Formulario.jsx";
 import Nosotros from './components/Nosotros/Nosotros.jsx';
 import TablaMascota from "./private/TablaMascota";
@@ -36,7 +33,6 @@ function App() {
         <Route path="/" exact component={Home}/>
         <Route path="/login" exact component={Login}/>
         <Route path="/mascotas" exact component={Mascotas}/>
-        {/* <Route path="/mascotas2" exact component={Mascotas}/> */}
         <PrivateRouter  path="/homeadmin" exact component={HomeAdmin}/>
         <PrivateRouter  path="/crearmascota" exact component={CrearMascota}/>
         <PrivateRouter  path="/crearservicio" exact component={CrearServicio}/>

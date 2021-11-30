@@ -72,10 +72,10 @@ function Formulario() {
             <Form.Group className='mt-3'>
                 <Row>
                     <Col>
-                    <Form.Control placeholder="Nombres" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                    <Form.Control placeholder="Nombres" required value={nombre} onChange={(e) => setNombre(e.target.value)} />
                     </Col>
                     <Col>
-                    <Form.Control placeholder="Apellidos" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                    <Form.Control placeholder="Apellidos" required value={apellido} onChange={(e) => setApellido(e.target.value)} />
                     </Col>
                 </Row>
             </Form.Group>
@@ -83,11 +83,11 @@ function Formulario() {
             <Form.Group>
             <Row className="my-4">
                     <Col>
-                    <Form.Control type="Email" placeholder="Ingresar email" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                    <Form.Control type="Email" required placeholder="Ingresar email" value={correo} onChange={(e) => setCorreo(e.target.value)} />
                     </Col>
 
                     <Col>
-                    <Form.Control placeholder="Ingrese Dirección" value={direccion} onChange={(e) => setDireccion(e.target.value)}/>
+                    <Form.Control placeholder="Ingrese Dirección" required value={direccion} onChange={(e) => setDireccion(e.target.value)}/>
                     </Col>
             </Row>
             </Form.Group>
@@ -95,11 +95,11 @@ function Formulario() {
             <Form.Group>
             <Row className="my-4">
                 <Col>
-                   <Form.Control placeholder="Ingrese su teléfono" value={numero} onChange={(e) => setNumero(e.target.value)} />
+                   <Form.Control placeholder="Ingrese su teléfono" required value={numero} onChange={(e) => setNumero(e.target.value)} />
                 </Col>
 
                 <Col>
-                <Form.Control placeholder="Ciudad" value={ciudad} onChange={(e) => setCiudad(e.target.value)} />
+                <Form.Control placeholder="Ciudad" value={ciudad} required onChange={(e) => setCiudad(e.target.value)} />
                 </Col>
             </Row>
                 </Form.Group>
@@ -119,7 +119,7 @@ function Formulario() {
 
                 <Form.Group>
                     <label htmlFor="exampleFormControlTextarea1">Detalla tu solicitud..</label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={observacion} onChange={(e) => setObservacion(e.target.value)}></textarea>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" required value={observacion} onChange={(e) => setObservacion(e.target.value)}></textarea>
                 </Form.Group> 
 
                 <Button 

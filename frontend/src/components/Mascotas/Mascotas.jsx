@@ -36,7 +36,7 @@ export default function Album() {
 const imgMascota = tam.map((mascotas)=>({
   imagenMascota: tam.imagenMascota
 }))
-
+console.log(imgMascota)
 
 const cards = tam;
 const theme = createTheme();

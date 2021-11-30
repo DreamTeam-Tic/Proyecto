@@ -157,7 +157,7 @@ const convertBase64=(file)=>{
 
                   </div>
                     <br />
-                    <img  classname="rounded" src={baseImage} alt="" width="400px"/>
+                    <img  className="rounded" src={baseImage} alt="" width="400px"/>
                     <br />
                   <button type="submit" className="btn btn btn-success">
 
