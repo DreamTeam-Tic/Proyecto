@@ -7,7 +7,7 @@ function whatsapp() {
         <div>
             <div className="whatsapp">
             <a href="https://wa.me/message/AMSUNBC5GBYDI1">
-                <img src={icono} width="50" height="50"></img>
+                <img src={icono} className="w-75 h-75" id="iconoWpp"></img>
             </a>
         </div> 
     </div>

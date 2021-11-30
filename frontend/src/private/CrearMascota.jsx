@@ -12,7 +12,6 @@ export default function CrearMascota() {
   const[tamañoSelect,setTamañoSelect]=useState([])
   const[raza,setRaza]=useState('')
   const [baseImage, setBaseImage] = useState("");
-//   const[imagenEscogida,setimagenEscogida]=useState(false);
   
 
 
@@ -26,7 +25,6 @@ export default function CrearMascota() {
         
     const file= e.target.files[0];
     const base64 = await convertBase64(file);
-    // console.log(base64);
     setBaseImage(base64)
     
 }
@@ -52,7 +50,6 @@ const convertBase64=(file)=>{
       nombre,
       raza,
       tamaño:tamañoSelect,
-      //imagenMascota
       imagenMascota: baseImage
 
     }
@@ -78,9 +75,6 @@ const convertBase64=(file)=>{
     }else{
 
       const respuesta = await Axios.post('/mascota/add',mascota)
-
-      console.log(respuesta)
-
       Swal.fire({
         icon:'success',
         title:"Mascota creada correctamente",
@@ -91,16 +85,8 @@ const convertBase64=(file)=>{
       e.target.reset();
       setNombre("");
       setRaza("");
-      //setimagenMascota("");
-      
-
-
-
-
-
     }
   }
-
 
   return (
 
