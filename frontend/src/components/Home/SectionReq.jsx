@@ -18,9 +18,9 @@ function SectionReq() {
           </div>
           <div className="col-md-8">
             <div className="card-body align-center">
-              <h5 className="card-title fs-3">Requesitos de adopción</h5>
-              <p className="card-text fs-4 text-left">
-                <div className="text-start ml-5" id="text">
+              <h5 className="card-title fs-3">Requisitos de adopción</h5>
+              
+                <div className="card-text fs-4 text-left text-start ml-5" id="text">
                   <ol>
                     <li>Deseos de tener una mascota.</li>
                     <li>El adoptante debe ser mayor de edad.</li>
@@ -30,7 +30,7 @@ function SectionReq() {
                     <li>Llenar formulario de adopción. Compromiso a esterilización</li>
                   </ol>
                 </div>
-              </p>
+              
             </div>
           </div>
         </div>

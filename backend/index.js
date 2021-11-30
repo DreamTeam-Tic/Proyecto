@@ -6,16 +6,20 @@ var morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const apiRouter = require('./routes')
+//limite de subida
 
+app.use(express.json({limit: '6mb'}));
+app.use(express.urlencoded({limit: '6mb'}));
 //midlewares
 app.use(cors());
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended : true}));
-app.use(express.json());
+//app.use(express.urlencoded({extended : true}));
+//app.use(express.json());
 
 //configuracion
 mongoose.Promise = global.Promise;
 const urlDB = 'mongodb+srv://mvinasco99:3122313450mv@cluster0.tjm3l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+// const urlDB = 'mongodb://mvinasco99:3122313450mv@cluster0-shard-00-00.tjm3l.mongodb.net:27017,cluster0-shard-00-01.tjm3l.mongodb.net:27017,cluster0-shard-00-02.tjm3l.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-qh9dvi-shard-0&authSource=admin&retryWrites=true&w=majority';
 mongoose.connect(urlDB)
     .then(mongoose => console.log("db conectada en atlas"))
 
@@ -29,7 +33,7 @@ app.set('PORT', process.env.PORT || 3000);
 
 //uploads
 
-// app.use(express.static("uploads"));
+app.use(express.static("uploads"));
 
 
 

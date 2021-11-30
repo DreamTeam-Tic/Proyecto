@@ -22,11 +22,12 @@ const upload = multer({storage: storage});
 router.post('/add',upload.single("imagenMascota"), mascotaController.add); // añadir usuario 
 
 router.get('/list', mascotaController.list); // listar usuarios
+router.get('/list/:id', mascotaController.listId); // listar usuarios
 
 router.get('/query', mascotaController.query); // buscar por correo querys atravez de params
 
-router.delete('/remove', mascotaController.remove);
-router.put('/update', mascotaController.update);
+router.delete('/remove/:id', mascotaController.remove);
+router.put('/update/:id', mascotaController.update);
 router.put('/enable', mascotaController.enable);
 router.put('/disable', mascotaController.disable);
 

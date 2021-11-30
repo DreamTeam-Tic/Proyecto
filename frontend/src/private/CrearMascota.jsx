@@ -1,61 +1,171 @@
+import React, { useState, useEffect } from 'react'
+import TablaMascota from './TablaMascota'
 
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import Swal from 'sweetalert2'
+import Axios from 'axios'
+export default function CrearMascota() {
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+
+  const [nombre,setNombre]=useState('')
+  const[tamaño,setTamaño]=useState([])
+  const[tamañoSelect,setTamañoSelect]=useState([])
+  const[raza,setRaza]=useState('')
+  const [baseImage, setBaseImage] = useState("");
+  
+
+
+
+  useEffect(() => {
+    setTamaño(['Pequeño', 'Mediano', 'Grande'])
+    setTamañoSelect('Pequeño')
+
+  },[])
+      
+  const setimagenMascota = async (e) =>{
+        
+    const file= e.target.files[0];
+    const base64 = await convertBase64(file);
+    setBaseImage(base64)
+    
+}
+const convertBase64=(file)=>{
+  return new Promise ((resolve, reject)=>{
+
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () =>{
+          resolve(fileReader.result)
+      }
+      fileReader.oneerror = (error)=>{
+          reject(error)
+      }
+  })
 }
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-];
 
-function CrearMascota() {
-    return (
+  const guardar = async (e) => {
+    e.preventDefault()
+    const mascota = {
+      nombre,
+      raza,
+      tamaño:tamañoSelect,
+      imagenMascota: baseImage
 
-        <>
-        <h1 className="mt-4">Crear mascotas</h1>
-        <div className="container mt-lg-5">
-        <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="caption table">
-        <caption>A basic table example with a caption</caption>
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </div>
+    }
+
+    if (nombre === "") {
+
+      Swal.fire({
+        icon: 'error',
+        title: "Debe escribir el nombre de la mascota",
+        showConfirmButton: false,
+        timer: 1500
+      })
+
+    } else if (raza === "") {
+
+      Swal.fire({
+        icon: 'error',
+        title: "Debe escribir la raza de la mascota",
+        showConfirmButton: false,
+        timer: 1500
+      })
+
+    } else {
+
+      const respuesta = await Axios.post('/mascota/add',mascota)
+      console.log(respuesta)
+      Swal.fire({
+        icon: 'success',
+        title: "Mascota creada correctamente",
+        showConfirmButton: false,
+        timer: 1500
+      })
+
+      e.target.reset();
+      setNombre("");
+      setRaza("");
+    }
+  }
+
+  return (
+
+    <>
+
+      <div className="container mt-4">
+        <div className="row">
+          <div className="col-md-7  mx-auto">
+            <div className="card">
+              <div className="container text-center fa-5x">
+                <i className="fas fa-paw"></i>
+              </div>
+              <div className="card-header bg-light text-center">
+                <h4>Crear Mascota</h4>
+              </div>
+              <div className="card-body">
+                <form onSubmit={guardar}>
+                  <div className="row">
+
+                    <div className="col-md-6">
+                      <label><strong>Nombre</strong></label>
+                      <input type="text" className="form-control required" placeholder="Escribe el nombre de la mascota" onChange={(e) => setNombre(e.target.value)} />
+                    </div>
+
+                    <div className="col-md-6">
+                      <label><strong>Raza</strong></label>
+                      <input type="text" className="form-control required" placeholder="Escribe la raza de la mascota" onChange={(e) => setRaza(e.target.value)} />
+                    </div>
+                    <label className="mt-3"><strong>Tamaño</strong></label>
+                    <div className="col-md-12 form-floating">
+
+                      <select className='form-select pb-2'
+                        id="flotingSelectGrid"
+                        aria-label="Floating label select example"
+                        onChange={(e) => setTamañoSelect(e.target.value)}>
+
+                        {
+                          tamaño.map(tamaño => (
+                            <option key={tamaño}>
+                              {tamaño}
+
+                            </option>
+                          ))
+
+
+                        }
+                      </select>
+                      <label htmlFor="flotingSelectGrid">Escoge una Opción</label>
+                    </div>
+
+
+                    <div className="mb-3 mt-3">
+                        <label htmlFor="formFile" className="form-label"><strong>Ingresa la imagen de la mascota</strong></label>
+                        <input type="file" className="form-control" id="formfile" accept=".jpg, .jpeg, .png"  onChange={(e) => {setimagenMascota(e);}} />
+
+                    </div>
+
+                  </div>
+                    <br />
+                    <img  className="rounded" src={baseImage} alt="" width="400px"/>
+                    <br />
+                  <button type="submit" className="btn btn btn-success">
+
+                    <span className="fa fa-save"></span> Guardar
+                  </button>
+                  <br />
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <TablaMascota />
+
     </>
+
+
   );
-
 }
-
-
-export default CrearMascota

@@ -14,6 +14,14 @@ function Nabvar() {
     }
 
   }, [])
+  const [hide, setHide]= useState(false)
+  useEffect(() =>{
+
+    if (sessionStorage.getItem('token')){
+      setHide(true)
+    }
+
+  }, [])
 
   const salir =()=>{
     sessionStorage.clear()
@@ -23,7 +31,7 @@ function Nabvar() {
 
     <div>
       <h1 className='my-3'>Pets for Always</h1>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="xl">
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -45,22 +53,16 @@ function Nabvar() {
             <Nav.Link href="/donaciones">Donaciones</Nav.Link>
             <Nav.Link href="/nosotros">Nosotros</Nav.Link>
             <Nav.Link href="/contactanos">Contáctanos</Nav.Link>
-            <div className='d-flex justify-content-end' style={{ width: '29rem' }}>
-                <Nav.Link href="/login">Login </Nav.Link>
-                <Nav.Link className='fas fa-user-shield mt-1'></Nav.Link>
-                </div>
-                
-            <Nav.Link hidden={show} onClick={salir} href="#">Salir</Nav.Link>     
-            </Nav>
-            
-
-            
+            <Nav.Link hidden={show} href="/homeadmin">Administracion</Nav.Link>
+              <div className="container" style={{width:"40vh"}}>
+              </div>
+            <Nav.Link  href="/login" className='d-flex flex-row-reverse justify-content-center fas fa-user-shield mt-1'> <span hidden={hide}  className="  mr-2 align-items-end"> Login </span> </Nav.Link>
+            <Nav.Link hidden={show} onClick={salir} href="#">Salir</Nav.Link>
+            </Nav>         
         </Navbar.Collapse>
       </Container>
     </Navbar>
     </div>
-
-
     );
 }
 
