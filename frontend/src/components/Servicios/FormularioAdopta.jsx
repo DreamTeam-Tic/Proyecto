@@ -6,13 +6,11 @@ import {useState} from 'react';
 
 function FormularioAdopta() {
    
-
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
     const [correo, setCorreo] = useState('')
     const [numero, setNumero] = useState('')
   
-
     const enviar = async (event)=>{
         
         event.preventDefault();
@@ -20,7 +18,6 @@ function FormularioAdopta() {
         const res = await Axios.post('/adoptante/add', adoptante);
         console.log(res);
         
-
         if (res.status!== 200) {
 
             
@@ -32,8 +29,7 @@ function FormularioAdopta() {
               timer: 1500
               
             })
-      
-            
+               
             
           }else {
             
@@ -55,22 +51,20 @@ function FormularioAdopta() {
 
     }
 
-
-
     return (
     <div>
             
         <Form className='container border border-5 mt-4' onSubmit={enviar}>
-            <h3 className="mt-3">¿ Deseas adoptar una mascota ?</h3>
+            <h3 className="mt-3">Formulario de Adopción</h3>
 
             
             <Form.Group className='mt-3'>
                 <Row>
                     <Col>
-                    <Form.Control placeholder="Nombres" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                    <Form.Control placeholder="Nombres" required value={nombre} onChange={(e) => setNombre(e.target.value)} />
                     </Col>
                     <Col>
-                    <Form.Control placeholder="Apellidos" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                    <Form.Control placeholder="Apellidos" required value={apellido} onChange={(e) => setApellido(e.target.value)} />
                     </Col>
                 </Row>
             </Form.Group>
@@ -78,7 +72,7 @@ function FormularioAdopta() {
             <Form.Group>
                 <Row className="my-4">
                         <Col>
-                        <Form.Control type="Email" placeholder="Ingresar email" value={correo} onChange={(e) => setCorreo(e.target.value)} />
+                        <Form.Control type="Email" required placeholder="Ingresar email" value={correo} onChange={(e) => setCorreo(e.target.value)} />
                         </Col>
                 </Row>
             </Form.Group>
@@ -86,7 +80,7 @@ function FormularioAdopta() {
             <Form.Group>
                 <Row className="my-4">
                     <Col>
-                    <Form.Control placeholder="Ingrese su teléfono" value={numero} onChange={(e) => setNumero(e.target.value)} />
+                    <Form.Control placeholder="Ingrese su teléfono" required value={numero} onChange={(e) => setNumero(e.target.value)} />
                     </Col>
                 </Row>
             </Form.Group>

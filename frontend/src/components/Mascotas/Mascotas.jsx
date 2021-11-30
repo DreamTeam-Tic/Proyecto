@@ -28,7 +28,6 @@ export default function Album() {
     setTamSelect(Mlist)
 
 }
-//const cards = tam;
 const theme = createTheme();
 
 

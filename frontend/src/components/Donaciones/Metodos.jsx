@@ -4,7 +4,7 @@ import imagen9 from '../../assets/p9.jpg'
 
 import React from 'react';
 
-import { Card} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
 function Metodos() {
