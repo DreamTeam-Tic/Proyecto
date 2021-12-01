@@ -50,7 +50,8 @@ const theme = createTheme();
                     component="img"
                     image={card.imagenMascota}
                     alt="random"
-                    style={{height:"200px"}}
+                    style={{height:"250px"}}
+                    
                   />
                   
                   <CardContent sx={{ flexGrow: 1 }}>
