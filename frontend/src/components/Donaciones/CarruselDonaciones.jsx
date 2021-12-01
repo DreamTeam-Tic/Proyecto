@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import imagen4 from '../../assets/p4.jpg'
-import imagen5 from '../../assets/p5.jpg'
+import imagen5 from '../../assets/p11.jpg'
 import imagen6 from '../../assets/p6.jpg'
 
 export default function CarruselDonaciones() {
@@ -22,7 +22,7 @@ export default function CarruselDonaciones() {
   </Carousel.Item>
   <Carousel.Item style={{height:'450px'}}>
     <img
-      className="d-block w-100 img-fluid h-60"
+      className="d-block w-100 img-fluid h-60 position-relative rounded"
       src={imagen5}
       alt="Second slide"
       
@@ -34,7 +34,7 @@ export default function CarruselDonaciones() {
   </Carousel.Item>
   <Carousel.Item style={{height:'450px'}}>
     <img
-      className="d-block w-100 img-fluid h-70"
+      className="d-block w-100 img-fluid h-70 position-relative rounded"
       src={imagen6}
       alt="Third slide"
     />

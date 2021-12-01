@@ -23,10 +23,10 @@ function Nosotros() {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title fs-2">Quienes Somos</h5>
+              <h5 className="card-title fs-2">¿Quiénes Somos?</h5>
               <p className="card-text fs-5 text-justify ml-3 mr-5 mt-4 mb-2">
-                Nosotros como fundación nos dedicamos al rescate y adopción de perros y gatos que carecen de un hogar y una familia. Pets For Alwasy les brinda a aquellos animalitos que no han contado con mucha suerte la oportunidad de encontrar una familia que esté dispuesta a brindarles todo el amor y cuidado que merecen.
-            </p>
+                Nuestra fundación se dedica al rescate y adopción de perros y gatos que carecen de un hogar y una familia. Pets For Alwasy les brinda a aquellos animalitos que no han contado con mucha suerte la oportunidad de encontrar una familia que esté dispuesta a brindarles todo el amor y cuidado que merecen.
+              </p>
             </div>
           </div>
         </div>
@@ -47,10 +47,10 @@ function Nosotros() {
               <div className="card-body">
                 <h5 className="card-title fs-3">Objetivo General</h5>
                 <p className="card-text fs-6 text-justify ml-2 mt-4 mr-2" >
-                  El objetivo de PetsForAlways se establece en brindar un hogar a
+                  El objetivo de PetsForAlways es brindar un hogar a
                   cada animal que carezca de uno, poder generar un impacto en la
-                  sociedad sobre el cuidado de los animales, y brindar diversos
-                  servicios en pro de el bienestar de los animales.
+                  sociedad sobre el cuidado de los animales y brindar diversos
+                  servicios en pro del bienestar de los animales.
                 </p>
               </div>
             </div>
@@ -71,7 +71,8 @@ function Nosotros() {
               <div className="card-body">
                 <h5 className="card-title fs-3">Misión</h5>
                 <p className="card-text fs-6 text-justify ml-2 mt-4 mr-2">
-                  Pets For Always busca brindar un hogar a cada perro y gato que necesiten de uno y generar consiencia colectiva sobre el cuidado de los animales.
+                Pets For Always es una fundación dedicada a brindar una segunda oportunidad a los animales rescatados de la calle, abandonados y maltratados en Bogotá y generar conciencia colectiva sobre el cuidado de los animales.
+
                 </p>
               </div>
             </div>
@@ -91,7 +92,7 @@ function Nosotros() {
               <div className="card-body">
                 <h5 className="card-title fs-3">Visión</h5>
                 <p className="card-text fs-6 text-justify ml-2 mr-2 mt-4">
-                 Para el 2026 esperamos haber rescatado, y haber brindado un hogar a más de 10.000 animales en condiciones de calle. Además haber mejorado las instalaciones y tener la capacidad de mantener más animales en condiciones dignas para ellos. 
+                Para el 2026 esperamos haber rescatado y brindado un hogar a más de 10.000 animales en condiciones de calle. Además mejorar las instalaciones y tener la capacidad de mantener más animales en condiciones dignas para ellos.
                 </p>
               </div>
             </div>
@@ -111,7 +112,7 @@ function Nosotros() {
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
                 <p className="card-text fs-6 text-justify ml-3 mr-3 mt-4">
-                  Desde que adoptamos a Max tengo un amigo con el que siempre puedo jugar y vivir muchas aventuras. Él es muy divertido, le encanta jugar conmigo todo el tiempo y siempre estamos juntos. Aunque muerde mis juguetes, eso no me gusta.
+                  Desde que adoptamos a Max tengo un amigo con el que siempre puedo jugar y vivir muchas aventuras. Él es muy divertido, le encanta jugar conmigo todo el tiempo y siempre estamos juntos.
                 </p>
               </div>
             </div>
@@ -152,7 +153,7 @@ function Nosotros() {
               <div className="card-body">
                 <h5 className="card-title fs-4 ml-3">Historia Adopción</h5>
                 <p className="card-text fs-6 text-justify ml-3 mr-3 mt-4">
-                  Adoptar a Kiara fue una gran ayuda para mi ansiedad, de cierta forma la compañia de esta gatica me ayudado mucho y ha hecho de mi dia a dia sea un tanto más especial.
+                Adoptar a Kiara fue una gran ayuda para mitigar mi ansiedad, de cierta forma la compañia de esta gatica me ha ayudado mucho y ha hecho de mi día a día sea más motivante.
                 </p>
               </div>
             </div>

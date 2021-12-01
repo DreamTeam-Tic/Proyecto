@@ -11,6 +11,7 @@ export default function Carrusel() {
         <div className='container mt-5'>
             <Carousel variant="white" className="rounded">
   <Carousel.Item style={{height:'450px'}}>
+  
     <img
       className="d-block w-100 img-fluid h-60 position-relative"
       src={imagen1}
@@ -21,6 +22,7 @@ export default function Carrusel() {
       <p>Paul McCartney</p>
     </Carousel.Caption>
   </Carousel.Item>
+  {/* <Carousel.Item > */}
   <Carousel.Item style={{height:'450px'}}>
     <img
       className="d-block w-100 img-fluid h-60"

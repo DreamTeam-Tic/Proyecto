@@ -5,7 +5,7 @@ import gatocolorido from '..//..//assets/gatocolorido.jpg'
 import mascotabonita from '../../assets/mascotabonita.jpg'
 import Propaganda from '../../assets/gatodormido.jpg'
 import '../../styles/Contactanos.css'
-import {Button} from 'react-bootstrap'
+
 
 
 
@@ -24,9 +24,6 @@ export default function Partesuperior() {
     />
     <Carousel.Caption>
     <div className="texto">¿Quieres saber mas sobre estas adorables mascotas?, con nosotros puedes tener la informacion de todos ellos, les buscamos un hogar agradable y calido donde tengan tiempo para ellos</div>
-        <form action="https://www.youtube.com/">
-        <button type="submit" className="btn btn-secondary">Escribenos</button>
-    </form>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item style={{height:'600px'}}>
@@ -38,13 +35,7 @@ export default function Partesuperior() {
     />
     <Carousel.Caption>
       
-      <div className="texto">Si te gusto alguna mascota, o te parece agradable saber informacion sobre está, no dudes en ponerte en contacto con nosotros para realizar la adopcion y obviamente antes de esto tener toda la informacion de tu futura mascota.</div>
-        <form>
-        <Button 
-        href="/donaciones" 
-        variant="secondary"
-        >Donaciones</Button> 
-    </form>
+      <div className="texto">Si te gusto alguna mascota, o te parece agradable saber informacion sobre está, no dudes en ponerte en contacto con nosotros para realizar la adopción y obviamente antes de esto tener toda la informacion de tu futura mascota.</div>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item style={{height:'600px'}}>
@@ -54,7 +45,7 @@ export default function Partesuperior() {
       alt="Third slide"
     />
     <Carousel.Caption>
-    <div className="texto">Entonces que esperas para ponerte en contacto con nosotros, resolvemos todo tipo de duda de manera virtual, para que tengas una comodidad agradable al momento de mirar tu futura mascota.</div>
+    <div className="texto">Entonces que esperas para ponerte en contacto con nosotros, resolvemos todo tipo de duda de manera virtual, para que tengas toda la información necesaria para tomar la mejor decisión.</div>
       
     </Carousel.Caption>
   </Carousel.Item>
