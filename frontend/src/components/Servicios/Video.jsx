@@ -11,6 +11,7 @@ function Video() {
                 width="1200px"
                 height="500px"
                 reactplayer="true"
+                controls
             />
         </div>
     )

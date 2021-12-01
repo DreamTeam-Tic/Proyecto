@@ -1,7 +1,9 @@
 
 #imgsection{
     border-radius: 9px;
-    margin: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: inherit;
 }
 #imgContainer{
     align-self: center;

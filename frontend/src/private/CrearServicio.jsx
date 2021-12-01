@@ -10,7 +10,7 @@ export default function CrearMascota() {
 
   const [nombre,setNombre]=useState('')
   const[descripcion,setDescripcion]=useState('')
-  const[imagenServicio,setimagenServicio]=useState();
+  // const[imagenServicio,setimagenServicio]=useState();
   
 
 
@@ -21,7 +21,7 @@ export default function CrearMascota() {
     const servicio= {
       nombre,
       descripcion,
-      imagenServicio
+      // imagenServicio
       
 
     }
@@ -97,11 +97,11 @@ export default function CrearMascota() {
                       <textarea className="form-control required" placeholder="Escribe la descripción del servicio" onChange={(e)=>setDescripcion(e.target.value)} ></textarea>
                     </div>
 
-                    <div className="mb-3 mt-3">
+                    {/* <div className="mb-3 mt-3">
                         <label for="formFile" className="form-label"><strong>Ingresa la imagen del servicio</strong></label>
                         <input type="file" className="form-control" id="formfile" onChange={(e)=>setimagenServicio(e.target.files[0])}/>
 
-                    </div>
+                    </div> */}
 
 
                     {/* <div className="col-md-6">

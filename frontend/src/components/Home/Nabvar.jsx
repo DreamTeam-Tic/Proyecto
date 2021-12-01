@@ -33,7 +33,7 @@ function Nabvar() {
       <h1 className='my-3'>Pets for Always</h1>
         <Navbar bg="light" expand="xl">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src={logo}
              width="35"
